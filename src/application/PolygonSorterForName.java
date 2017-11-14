@@ -9,7 +9,6 @@ import shapes.*;
 import sorting.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.io.*;
 
 /**
@@ -94,7 +93,7 @@ public class PolygonSorterForName
 			for(int i = 0; i < count; i++)
 			{
 				sb = readNext();
-				String className = "polygons."+sb.toString();
+				String className = "shapes."+sb.toString();
 				
 				Class cls = Class.forName(className);
 				
@@ -168,7 +167,7 @@ public class PolygonSorterForName
 			int c = fis.read();
 			
 			// check if char is 'space' or EOF
-			while(c != -1)
+			while(c != -1 && (c != 32))
 			{
 				sbl.append((char)c);
 				c = fis.read();

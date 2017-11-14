@@ -2,17 +2,18 @@ package sorting;
 
 public class SelectionSort {
 	public static <T extends Comparable<T>> void sort(T[] arr) {
-		ss(arr, 0);
+		ss(arr);
 	}
-	public static <T extends Comparable<T>> void ss(T[] arr, int begin) {
-		int small = begin;
-		for (int i = begin; i < arr.length; i++) {
-			if (arr[small].compareTo(arr[i]) > 0) {
-				small = i;
+	public static <T extends Comparable<T>> void ss(T[] arr) {
+		for (int b = 0; b < arr.length; b++) {
+			int small = b;
+			for (int i = b; i < arr.length; i++) {
+				if (arr[small].compareTo(arr[i]) > 0) {
+					small = i;
+				}
 			}
+			swap(arr, b, small);
 		}
-		swap(arr, begin, small);
-		if (begin < arr.length-1) ss(arr, begin+1);
 	}
 	
 	private static <T extends Comparable<T>> void swap(T[] arr, int a, int b) {

@@ -7,16 +7,17 @@ public class BubbleSort {
 	
 	public static <T extends Comparable<T>> void bs(T[] arr, int len) {
 		T temp;
-		for (int i = 0; i < len; i++) {
-			if (i < len-1) {
-				if (arr[i].compareTo(arr[i+1]) > 0) {
-					temp = arr[i];
-					arr[i] = arr[i+1];
-					arr[i+1] = temp;
+		for (int l = len; l > 0; l--) {
+			for (int i = 0; i < l; i++) {
+				if (i < l-1) {
+					if (arr[i].compareTo(arr[i+1]) > 0) {
+						temp = arr[i];
+						arr[i] = arr[i+1];
+						arr[i+1] = temp;
+					}
 				}
 			}
 		}
-		if (len > 1) bs(arr, len-1);
 	}
 	
 	public static void main(String[] args) {
