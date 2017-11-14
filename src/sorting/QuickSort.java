@@ -11,7 +11,7 @@ public class QuickSort {
         int index = partition(list, left, right);
         
         if (left < index - 1)	qs(list, left, index - 1);
-        if (index < right)	qs(list, index, right);
+        if (index < right)		qs(list, index, right);
     }
 
     private static <T extends Comparable<T>> int partition(T list[], int left, int right) {

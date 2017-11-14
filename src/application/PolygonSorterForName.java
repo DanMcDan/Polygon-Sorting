@@ -168,7 +168,7 @@ public class PolygonSorterForName
 			int c = fis.read();
 			
 			// check if char is 'space' or EOF
-			while((c != -1) && (c != 32))
+			while(c != -1)
 			{
 				sbl.append((char)c);
 				c = fis.read();
@@ -194,19 +194,19 @@ public class PolygonSorterForName
 		
 		if(sortType == 'b')
 		{
-			//TODO: Sorts.bubbleSort(polygonArray, polygonArray.length, null);
+			BubbleSort.sort(polygonArray);
 		}
 		if(sortType == 's')
 		{
-			//TODO: Sorts.selectionSort(polygonArray, polygonArray.length);
+			SelectionSort.sort(polygonArray);
 		}
 		if(sortType == 'i')
 		{
-			//TODO: Sorts.insertionSort(polygonArray, polygonArray.length);
+			InsertionSort.sort(polygonArray);
 		}
 		if(sortType == 'm')
 		{
-			//TODO: Sorts.mergeSort(polygonArray, 0, polygonArray.length - 1);
+			MergeSort.sort(polygonArray);
 		}
 		if(sortType == 'q')
 		{
@@ -214,7 +214,8 @@ public class PolygonSorterForName
 		}
 		if(sortType == 'z')
 		{
-			//TODO: Sorts.shakerSort(polygonArray);
+			//TODO: ENTER YOUR SORT HERE
+			//Sorts.shakerSort(polygonArray);
 		}
 		
 		stop = System.currentTimeMillis();
