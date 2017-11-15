@@ -45,4 +45,21 @@ public abstract class Polygon implements Comparable<Polygon> {
 		
 		return (int) (compareSize - otherSize);
 	}
+	
+	@Override
+	public String toString() {
+		switch(compareType) {
+		case 'a':
+			return this.getClass().getName() + ", Area: " + this.getArea();
+			
+		case 'h':
+			return this.getClass().getName() + ", Height: " + this.getHeight();
+			
+		case 'v':
+			return this.getClass().getName() + ", Volume: " + this.getVolume();
+			
+			default:
+				return null;
+		}
+	}
 }

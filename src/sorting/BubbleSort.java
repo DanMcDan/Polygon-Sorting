@@ -1,13 +1,14 @@
 package sorting;
 
 public class BubbleSort {
-	public static <T extends Comparable<T>> void sort(T[] arr) {
-		bs(arr, arr.length);
-	}
 	
-	public static <T extends Comparable<T>> void bs(T[] arr, int len) {
+	/**
+	 * Sorting algorithm using the Bubble sort
+	 * @param arr arr represents an array of generic  objects
+	 */
+	public static <T extends Comparable<T>> void sort(T[] arr) {
 		T temp;
-		for (int l = len; l > 0; l--) {
+		for (int l = arr.length; l > 0; l--) {
 			for (int i = 0; i < l; i++) {
 				if (i < l-1) {
 					if (arr[i].compareTo(arr[i+1]) > 0) {
